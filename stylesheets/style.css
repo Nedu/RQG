@@ -30,7 +30,7 @@ body {
 .controls {
 	position: absolute;
     bottom: 0;
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     padding: 20px 0px;
@@ -63,4 +63,24 @@ h1 {
 	display: inline;
 	padding-left: 2%;
 	padding-right: 2%;
+}
+
+.quotes {
+	padding-bottom: 25%;
+}
+
+@media screen and (max-width: 600px) {
+    .app {
+        width: 85%;
+        padding: 10px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .app {
+        font-size: 1em;
+        padding: 0 1.5%;
+        width: 75%;
+    }
 }

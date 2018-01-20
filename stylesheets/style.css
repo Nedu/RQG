@@ -59,7 +59,12 @@ h1 {
 	font-family: 'VT323', monospace;
 }
 
+.quoteFont {
+	font-family: 'Permanent Marker', cursive;
+}
+
 .quote {
+	font-family: 'Permanent Marker', cursive;
 	display: inline;
 	padding-left: 2%;
 	padding-right: 2%;

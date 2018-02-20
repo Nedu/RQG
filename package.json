@@ -2,6 +2,9 @@
   "name": "rqg",
   "version": "1.0.0",
   "description": "This is a Random Quote Generator web application which displays to the user random quotes on the click of a button. User are also able to tweet out the quotes. This app was built using AJAX while utilizing a JSON-encoded, third party external API to fetch the quotes data. Twitter Web Intents was integrated to enable the tweets feature.",
+  "scripts": {
+    "format": "prettier --write '**/*.{js,jsx}'"
+  },
   "author": "Nedu Robert",
   "license": "ISC",
   "devDependencies": {

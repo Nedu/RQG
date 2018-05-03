@@ -6,16 +6,16 @@ const headers = new Headers({
   Accept: 'application/json',
 });
 
-// function to get quote from API using fetch
-function getQuote() {
-  fetch(url, { headers })
-    .then(response => response.json())
-    .then(data => displayQuote(data.quote, data.author))
-    .catch(err => console.log(`An error: ${err} occured`));
+// Get quote from API using fetch
+async function getQuote() {
+  const res = await fetch(url, { headers });
+  const data = await res.json();
+  return [data.quote, data.author];
 }
 
-// function to display quote
-function displayQuote(quote, author) {
+// Display quote
+async function displayQuote() {
+  const [quote, author] = await getQuote();
   const quoteText = document.querySelector('.quote');
   const authorText = document.querySelector('#author');
   const tweetQuote = document.querySelector('.tweet');
@@ -26,5 +26,5 @@ function displayQuote(quote, author) {
   tweetQuote.setAttribute('href', `https://twitter.com/intent/tweet?text=${quote}-${author}`);
 }
 
-newQuote.addEventListener('click', getQuote);
-getQuote();
+newQuote.addEventListener('click', displayQuote);
+displayQuote();
